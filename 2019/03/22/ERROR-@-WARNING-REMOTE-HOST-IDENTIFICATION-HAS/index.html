@@ -23,27 +23,25 @@ ga('send', 'pageview');
     
     
     
-    <title>Git 配置SSH密钥 | 人生苦短，我用Python。</title>
+    <title>vps连接错误 | 人生苦短，我用Python。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="git">
-    <meta name="description" content="Git 配置SSH密钥  生成SSH密钥 1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;  查看生成的密钥 并复制密钥 1cat ~/.ssh/id_rsa.pub  将密钥配置到GitHub      https 免密码配置  新建文件保存密码 1vim ~/.git-credentials  添加以下内容 1https://&amp;#12">
-<meta name="keywords" content="git">
+    <meta name="keywords" content="ssh-keygen">
+    <meta name="description" content="记录下今天连接连接vps出现的问题,因为重装vps本地客户端还储存了主机之前的密钥导致报错 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。  12345678910# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f &quot;~/.ssh/known_hosts&quot; -R">
+<meta name="keywords" content="ssh-keygen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 配置SSH密钥">
-<meta property="og:url" content="https://benxin.xyz/2019/03/21/Git 配置SSH密钥/index.html">
+<meta property="og:title" content="vps连接错误">
+<meta property="og:url" content="https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/index.html">
 <meta property="og:site_name" content="人生苦短，我用Python。">
-<meta property="og:description" content="Git 配置SSH密钥  生成SSH密钥 1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;  查看生成的密钥 并复制密钥 1cat ~/.ssh/id_rsa.pub  将密钥配置到GitHub      https 免密码配置  新建文件保存密码 1vim ~/.git-credentials  添加以下内容 1https://&amp;#12">
+<meta property="og:description" content="记录下今天连接连接vps出现的问题,因为重装vps本地客户端还储存了主机之前的密钥导致报错 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。  12345678910# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f &quot;~/.ssh/known_hosts&quot; -R">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/20190321172351.png">
-<meta property="og:updated_time" content="2019-03-21T13:19:48.603Z">
+<meta property="og:updated_time" content="2019-03-22T14:57:57.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 配置SSH密钥">
-<meta name="twitter:description" content="Git 配置SSH密钥  生成SSH密钥 1ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;  查看生成的密钥 并复制密钥 1cat ~/.ssh/id_rsa.pub  将密钥配置到GitHub      https 免密码配置  新建文件保存密码 1vim ~/.git-credentials  添加以下内容 1https://&amp;#12">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/20190321172351.png">
+<meta name="twitter:title" content="vps连接错误">
+<meta name="twitter:description" content="记录下今天连接连接vps出现的问题,因为重装vps本地客户端还储存了主机之前的密钥导致报错 WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。  12345678910# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f &quot;~/.ssh/known_hosts&quot; -R">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -135,7 +133,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Git 配置SSH密钥</div>
+        <div class="flex-col header-title ellipsis">vps连接错误</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -157,15 +155,15 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Git 配置SSH密钥</h1>
+        <h1 class="title">vps连接错误</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-03-21T13:23:45.201Z" itemprop="datePublished" class="page-time">
-  2019-03-21
+                <time datetime="2019-03-22T14:57:57.477Z" itemprop="datePublished" class="page-time">
+  2019-03-22
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
 
             
         </h5>
@@ -180,15 +178,15 @@ ga('send', 'pageview');
 <div class="container body-wrap">
     
 
-<article id="post-Git 配置SSH密钥" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Git 配置SSH密钥</h1>
+        <h1 class="post-card-title">vps连接错误</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-03-21 21:23:45" datetime="2019-03-21T13:23:45.201Z" itemprop="datePublished">2019-03-21</time>
+            <time class="post-time" title="2019-03-22 22:57:57" datetime="2019-03-22T14:57:57.477Z" itemprop="datePublished">2019-03-22</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
 
 
 
@@ -200,33 +198,11 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>Git 配置SSH密钥</p>
-<ol>
-<li><p>生成SSH密钥</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看生成的密钥 并复制密钥</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将密钥配置到GitHub </p>
-<p><img src="https://raw.githubusercontent.com/benxin/image_depot/master/img/20190321172351.png" alt="GitHub"></p>
-</li>
-</ol>
-<p> https 免密码配置</p>
-<ul>
-<li><p>新建文件保存密码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.git-credentials</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加以下内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://&#123;username&#125;:&#123;passwd&#125;@github.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加git配置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看变化</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.gitconfig</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+            <blockquote>
+<p>记录下今天连接连接vps出现的问题,因为重装vps本地客户端还储存了主机之前的密钥导致报错</p>
+<p>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span> ip vps的ip prot vps的prot</span><br><span class="line">ssh-keygen -R    # 无效错误依旧</span><br><span class="line">ssh-keygen -f "~/.ssh/known_hosts" -R ip: port  # 重试发现错误依旧</span><br><span class="line">ssh-copy-id root@ip -p port</span><br><span class="line">vi ~/.ssh/known_hosts  # 将已知主机密钥全部移除 dd</span><br><span class="line"><span class="meta">#</span> 或者 直接删除 known_hosts</span><br><span class="line">rm ~/.ssh/known_hosts</span><br><span class="line"><span class="meta">#</span> 重新连接输入密码连接成功!</span><br><span class="line">ssh-copy-id root@ip -p port</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -235,12 +211,12 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-21T13:19:48.603Z" itemprop="dateUpdated">2019-03-21 21:19:48</time>
+    最后更新时间：<time datetime="2019-03-22T14:57:57.477Z" itemprop="dateUpdated">2019-03-22 22:57:57</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/03/21/Git 配置SSH密钥/" target="_blank" rel="external">https://benxin.xyz/2019/03/21/Git 配置SSH密钥/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" target="_blank" rel="external">https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/</a>
         
     </div>
     
@@ -257,7 +233,7 @@ ga('send', 'pageview');
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-keygen/">ssh-keygen</a></li></ul>
 
 
             
@@ -267,7 +243,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/&title=《Git 配置SSH密钥》 — 人生苦短，我用Python。&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/&title=《vps连接错误》 — 人生苦短，我用Python。&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -277,22 +253,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/&title=《Git 配置SSH密钥》 — 人生苦短，我用Python。&source=成长旅程记录！" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/&title=《vps连接错误》 — 人生苦短，我用Python。&source=成长旅程记录！" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Git 配置SSH密钥》 — 人生苦短，我用Python。&url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/&via=https://benxin.xyz" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vps连接错误》 — 人生苦短，我用Python。&url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/&via=https://benxin.xyz" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -312,21 +288,14 @@ ga('send', 'pageview');
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">vps连接错误</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2019/03/21/Git使用代理/" id="post-next" class="post-nav-link">
+      <a href="/2019/03/21/Git 配置SSH密钥/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Git 使用代理</h4>
+        <h4 class="title">Git 配置SSH密钥</h4>
       </a>
     </div>
   
@@ -426,7 +395,7 @@ ga('send', 'pageview');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/&title=《Git 配置SSH密钥》 — 人生苦短，我用Python。&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/&title=《vps连接错误》 — 人生苦短，我用Python。&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -436,22 +405,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/&title=《Git 配置SSH密钥》 — 人生苦短，我用Python。&source=成长旅程记录！" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/&title=《vps连接错误》 — 人生苦短，我用Python。&source=成长旅程记录！" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Git 配置SSH密钥》 — 人生苦短，我用Python。&url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/&via=https://benxin.xyz" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vps连接错误》 — 人生苦短，我用Python。&url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/&via=https://benxin.xyz" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -462,7 +431,7 @@ ga('send', 'pageview');
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://benxin.xyz/2019/03/21/Git 配置SSH密钥/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://benxin.xyz/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" alt="微信分享二维码">
 </div>
 
 
