@@ -39,7 +39,7 @@ ga('send', 'pageview');
 <meta property="og:description" content="安装ChromeDriver和Selenium  这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）beta （64 位）所以选择74.xxx 版本的ChromeDriver.  12345678910111213141516171819pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://benxin.xyz/2019/03/31/使用Python+Selenium%20几行代码实现豆瓣登录/![](https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190331145358.png">
-<meta property="og:updated_time" content="2019-03-31T07:07:04.777Z">
+<meta property="og:updated_time" content="2019-03-31T07:09:35.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Python和Selenium 几行代码实现豆瓣登录.">
 <meta name="twitter:description" content="安装ChromeDriver和Selenium  这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）beta （64 位）所以选择74.xxx 版本的ChromeDriver.  12345678910111213141516171819pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没">
@@ -213,7 +213,7 @@ ga('send', 'pageview');
 <p><img src="![](https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190331145358.png" alt></p>
 </li>
 <li><p>代码实现.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome()</span><br><span class="line">driver.get(<span class="string">"https://www.douban.com"</span>)</span><br><span class="line">driver.switch_to.frame(<span class="number">0</span>)</span><br><span class="line">driver.find_element_by_class_name(<span class="string">"account-tab-account"</span>).click()</span><br><span class="line">driver.find_element_by_id(<span class="string">"username"</span>).send_keys(<span class="string">"your_username"</span>)</span><br><span class="line">driver.find_element_by_id(<span class="string">"password"</span>).send_keys(<span class="string">"your_password"</span>)</span><br><span class="line">driver.find_element_by_partial_link_text(<span class="string">"登录豆瓣"</span>).click()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome()</span><br><span class="line">driver.get(<span class="string">"https://www.douban.com"</span>)</span><br><span class="line">driver.switch_to.frame(<span class="number">0</span>)</span><br><span class="line">driver.find_element_by_class_name(<span class="string">"account-tab-account"</span>).click()</span><br><span class="line">driver.find_element_by_id(<span class="string">"username"</span>).send_keys(<span class="string">"your_username"</span>)</span><br><span class="line">driver.find_element_by_id(<span class="string">"password"</span>).send_keys(<span class="string">"your_password"</span>)</span><br><span class="line">driver.find_element_by_partial_link_text(<span class="string">"登录豆瓣"</span>).click()</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -224,7 +224,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-31T07:07:04.777Z" itemprop="dateUpdated">2019-03-31 15:07:04</time>
+    最后更新时间：<time datetime="2019-03-31T07:09:35.310Z" itemprop="dateUpdated">2019-03-31 15:09:35</time>
 </span><br>
 
 
