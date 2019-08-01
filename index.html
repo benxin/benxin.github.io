@@ -114,7 +114,7 @@ ga('send', 'pageview');
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://twitter.com/_benxin" target="_blank">
+              <a href="https://twitter.com/fish__xyz" target="_blank">
                 <i class="icon icon-lg icon-twitter"></i>
                 Twitter
               </a>
@@ -198,7 +198,7 @@ ga('send', 'pageview');
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f "~...
+        记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地...
     
 
         <a href="/2019/08/01/ssh-keygen-wrong/" class="post-more waves-effect waves-button">
@@ -246,7 +246,7 @@ ga('send', 'pageview');
     
         
 安装ChromeDriver和Selenium
-这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）所以选择74.xxx 版本的  ChromeDriver.123456789101112131415161718pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没有科学上网,也可以使用...
+这里chrome选择,需要根据你所使用的ch...
     
 
         <a href="/2019/08/01/Python+Selenium/" class="post-more waves-effect waves-button">
@@ -293,12 +293,7 @@ ga('send', 'pageview');
 
     
         Git 使用代理
-有时候我们需要克隆一些比较大的文件时,因为网络环境的关系,这个时候就需要通过代理来提高速度.
-
-先决条件 电脑已配置科学上网环境
-
-
-方法一使用命令行1234567891011# 以下使用http代理git config --global http.proxy http://127.0.0.1:1080git config --global https.proxy http...
+有时候我们需要克隆一些比较大的文件时,因为网络环境的关系,这个时候就需要通过...
     
 
         <a href="/2019/08/01/git-proxy/" class="post-more waves-effect waves-button">
@@ -344,7 +339,7 @@ ga('send', 'pageview');
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Termux是一个Android终端模拟器和Linux环境应用程序，可直接使用，无需root或设置。自动安装最小基本系统，使用APT包管理器可以使用其他软件包。Termux 安装Google PlayF-Droid更换源文件及安装一些必要的软件12345678910# 添加国内的源文件,默认的是国外的,安装软件比较慢# 编辑源文件vi  $PREFIX/etc/apt/sources.lis...
+        Termux是一个Android终端模拟器和Linux环境应用程序，可直接使用，无需root或...
     
 
         <a href="/2019/08/01/Termux/" class="post-more waves-effect waves-button">
@@ -391,18 +386,7 @@ ga('send', 'pageview');
 
     
         Git 配置SSH密钥
-生成SSH密钥1ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
-查看生成的密钥 并复制密钥1cat ~/.ssh/id_rsa.pub
-
-将密钥配置到GitHub
-
-
-https 免密码配置
-新建文件保存密码
-1vim ~/.git-credentials
-
-添加以下内容1https://&#123;use...
+生成SSH密钥1ssh-keygen -t rsa -b 4096 -...
     
 
         <a href="/2019/08/01/Git 配置SSH密钥/" class="post-more waves-effect waves-button">
