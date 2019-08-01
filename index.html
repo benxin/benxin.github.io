@@ -171,13 +171,52 @@ ga('send', 'pageview');
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-使用Python+Selenium 模拟豆瓣登录" class="article-card article-type-post" itemprop="blogPost">
+            <article id="post-Termux" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2019-03-31 14:45:49" datetime="2019-03-31T06:45:49.414Z" itemprop="datePublished">2019-03-31</time>
+        <time class="post-time" title="2019-08-01 22:19:03" datetime="2019-08-01T14:19:03.427Z" itemprop="datePublished">2019-08-01</time>
 
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/01/Termux/">No title</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        title: 使用Termux + python做一些有趣的事tags: Termuxcategories: Termux 
+Termux是一个Android终端模拟器和Linux环境应用程序，可直接使用，无需root或设置。自动安装最小基本系统，使用APT包管理器可以使用其他软件包。Termux 安装Google PlayF-Droid更换源文件及安装一些必要的软件12345678910#...
+    
+
+        <a href="/2019/08/01/Termux/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Git设置代理" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-01 22:19:03" datetime="2019-08-01T14:19:03.423Z" itemprop="datePublished">2019-08-01</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
 
 
 
@@ -188,7 +227,7 @@ ga('send', 'pageview');
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/03/31/使用Python+Selenium 模拟豆瓣登录/">使用Python和Selenium 模拟豆瓣登录.</a>
+      <a class="post-title-link" href="/2019/08/01/Git设置代理/">Git 使用代理</a>
     </h3>
   
 
@@ -198,22 +237,81 @@ ga('send', 'pageview');
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
-安装ChromeDriver和Selenium
+        Git 使用代理
+有时候我们需要克隆一些比较大的文件时,因为网络环境的关系,这个时候就需要通过代理来提高速度.
 
-这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）所以选择74.xxx 版本的ChromeDriver.
+先决条件 电脑已配置科学上网环境
 
-12345678910111213141516171819pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没有科学上网,也可...
+
+方法一使用命令行1234567891011# 以下使用http代理git config --global http.proxy http://127.0.0.1:1080git config --global https.proxy http...
     
 
-        <a href="/2019/03/31/使用Python+Selenium 模拟豆瓣登录/" class="post-more waves-effect waves-button">
+        <a href="/2019/08/01/Git设置代理/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Git 配置SSH密钥" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-01 22:19:03" datetime="2019-08-01T14:19:03.411Z" itemprop="datePublished">2019-08-01</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/01/Git 配置SSH密钥/">Git 配置SSH密钥</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Git 配置SSH密钥
+生成SSH密钥1ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+查看生成的密钥 并复制密钥1cat ~/.ssh/id_rsa.pub
+
+将密钥配置到GitHub
+
+
+https 免密码配置
+新建文件保存密码
+1vim ~/.git-credentials
+
+添加以下内容1https://&#123;use...
+    
+
+        <a href="/2019/08/01/Git 配置SSH密钥/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
 
     </div>
     
@@ -225,7 +323,7 @@ ga('send', 'pageview');
             <article id="post-ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2019-03-22 22:45:12" datetime="2019-03-22T14:45:12.468Z" itemprop="datePublished">2019-03-22</time>
+        <time class="post-time" title="2019-08-01 22:18:58" datetime="2019-08-01T14:18:58.427Z" itemprop="datePublished">2019-08-01</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
@@ -239,7 +337,7 @@ ga('send', 'pageview');
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/">vps连接因密钥问题产生错误</a>
+      <a class="post-title-link" href="/2019/08/01/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/">vps连接因密钥问题产生错误</a>
     </h3>
   
 
@@ -249,14 +347,10 @@ ga('send', 'pageview');
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
-记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。
-WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。
-
-12345678910# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen...
+        记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f "~...
     
 
-        <a href="/2019/03/22/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" class="post-more waves-effect waves-button">
+        <a href="/2019/08/01/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -272,13 +366,13 @@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-Git 配置SSH密钥" class="article-card article-type-post" itemprop="blogPost">
+            <article id="post-使用Python+Selenium 模拟豆瓣登录" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2019-03-21 21:23:45" datetime="2019-03-21T13:23:45.201Z" itemprop="datePublished">2019-03-21</time>
+        <time class="post-time" title="2019-08-01 22:18:55" datetime="2019-08-01T14:18:55.863Z" itemprop="datePublished">2019-08-01</time>
 
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
 
 
 
@@ -289,7 +383,7 @@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/03/21/Git 配置SSH密钥/">Git 配置SSH密钥</a>
+      <a class="post-title-link" href="/2019/08/01/使用Python+Selenium 模拟豆瓣登录/">使用Python和Selenium 模拟豆瓣登录.</a>
     </h3>
   
 
@@ -299,91 +393,22 @@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Git 配置SSH密钥
+        
+安装ChromeDriver和Selenium
 
-生成SSH密钥
-1ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）所以选择74.xxx 版本的ChromeDriver.
 
-查看生成的密钥 并复制密钥
-1cat ~/.ssh/id_rsa.pub
-
-将密钥配置到GitHub 
-
-
-
- https 免密码配置
-
-新建文件保存密码
-1vim ~/.git-credentials
-
-添加以下内容
-1https://&...
+123456789101112131415161718pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没有科学上网,也可以使...
     
 
-        <a href="/2019/03/21/Git 配置SSH密钥/" class="post-more waves-effect waves-button">
+        <a href="/2019/08/01/使用Python+Selenium 模拟豆瓣登录/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Git设置代理" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-03-21 21:21:22" datetime="2019-03-21T13:21:22.591Z" itemprop="datePublished">2019-03-21</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/03/21/Git设置代理/">Git 使用代理</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Git 使用代理
-
-有时候我们需要克隆一些比较大的文件时,因为网络环境的关系,这个时候就需要通过代理来提高速度.
-
-先决条件 电脑已配置科学上网环境
-
-
-
-方法一使用命令行
-
-1234567891011# 以下使用http代理git config --global http.proxy http://127.0.0.1:1080git config --global https.proxy ...
-    
-
-        <a href="/2019/03/21/Git设置代理/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 
     </div>
     
