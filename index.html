@@ -171,10 +171,104 @@ ga('send', 'pageview');
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-Git设置代理" class="article-card article-type-post" itemprop="blogPost">
+            <article id="post-ssh-keygen-wrong" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2019-08-01 22:23:59" datetime="2019-08-01T14:23:59.423Z" itemprop="datePublished">2019-08-01</time>
+        <time class="post-time" title="2019-08-01 23:07:41" datetime="2019-08-01T15:07:41.229Z" itemprop="datePublished">2019-08-01</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/01/ssh-keygen-wrong/">vps连接因密钥问题产生错误</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f "~...
+    
+
+        <a href="/2019/08/01/ssh-keygen-wrong/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-keygen/">ssh-keygen</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-Python+Selenium" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-01 23:07:41" datetime="2019-08-01T15:07:41.225Z" itemprop="datePublished">2019-08-01</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/01/Python+Selenium/">使用Python和Selenium 模拟豆瓣登录.</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+安装ChromeDriver和Selenium
+这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）所以选择74.xxx 版本的  ChromeDriver.123456789101112131415161718pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没有科学上网,也可以使用...
+    
+
+        <a href="/2019/08/01/Python+Selenium/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-git-proxy" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-01 23:07:41" datetime="2019-08-01T15:07:41.213Z" itemprop="datePublished">2019-08-01</time>
 
         
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
@@ -188,7 +282,7 @@ ga('send', 'pageview');
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/01/Git设置代理/">Git 使用代理</a>
+      <a class="post-title-link" href="/2019/08/01/git-proxy/">Git 使用代理</a>
     </h3>
   
 
@@ -207,7 +301,7 @@ ga('send', 'pageview');
 方法一使用命令行1234567891011# 以下使用http代理git config --global http.proxy http://127.0.0.1:1080git config --global https.proxy http...
     
 
-        <a href="/2019/08/01/Git设置代理/" class="post-more waves-effect waves-button">
+        <a href="/2019/08/01/git-proxy/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -269,52 +363,6 @@ ga('send', 'pageview');
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-01 22:23:59" datetime="2019-08-01T14:23:59.419Z" itemprop="datePublished">2019-08-01</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/01/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/">vps连接因密钥问题产生错误</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f "~...
-    
-
-        <a href="/2019/08/01/ERROR-@-WARNING-REMOTE-HOST-IDENTIFICATION-HAS/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-keygen/">ssh-keygen</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
             <article id="post-Git 配置SSH密钥" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -365,57 +413,6 @@ https 免密码配置
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-使用Python+Selenium 模拟豆瓣登录" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-01 22:23:59" datetime="2019-08-01T14:23:59.415Z" itemprop="datePublished">2019-08-01</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/01/使用Python+Selenium 模拟豆瓣登录/">使用Python和Selenium 模拟豆瓣登录.</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-安装ChromeDriver和Selenium
-
-这里chrome选择,需要根据你所使用的chrome版本下载 比如我用的是74.0.3729.40（正式版本）所以选择74.xxx 版本的ChromeDriver.
-
-123456789101112131415161718pip3 install selenium# 这里我用的是官方的下载地址,因为官网404了,如果你没有科学上网,也可以使...
-    
-
-        <a href="/2019/08/01/使用Python+Selenium 模拟豆瓣登录/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 
     </div>
     
