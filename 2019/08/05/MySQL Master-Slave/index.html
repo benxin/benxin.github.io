@@ -30,19 +30,19 @@ ga('send', 'pageview');
     
     
     <meta name="keywords" content="MySQL">
-    <meta name="description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.03从MySQL Server: 10.0.04# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.03server-id		= 1">
+    <meta name="description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.0.3server-id">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL主从配置(适用于MySQL 8.0+)">
 <meta property="og:url" content="https://benxin.xyz/2019/08/05/MySQL Master-Slave/index.html">
 <meta property="og:site_name" content="Myblog">
-<meta property="og:description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.03从MySQL Server: 10.0.04# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.03server-id		= 1">
+<meta property="og:description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.0.3server-id">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190805002916.png">
-<meta property="og:updated_time" content="2019-08-04T17:38:21.064Z">
+<meta property="og:updated_time" content="2019-08-04T23:32:33.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL主从配置(适用于MySQL 8.0+)">
-<meta name="twitter:description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.03从MySQL Server: 10.0.04# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.03server-id		= 1">
+<meta name="twitter:description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.0.3server-id">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190805002916.png">
     
     <link rel="shortcut icon" href="/favicon.ico">
@@ -204,10 +204,10 @@ ga('send', 'pageview');
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="MySQL主从配置-适用于MySQL-8-0"><a href="#MySQL主从配置-适用于MySQL-8-0" class="headerlink" title="MySQL主从配置(适用于MySQL 8.0+)"></a>MySQL主从配置(适用于MySQL 8.0+)</h1><ol>
-<li><h5 id="配置主服务器"><a href="#配置主服务器" class="headerlink" title="配置主服务器"></a>配置主服务器</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">主MySQL Server: 10.0.03</span><br><span class="line">从MySQL Server: 10.0.04</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑主服务器配置文件</span></span><br><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
+<li><h5 id="配置主服务器"><a href="#配置主服务器" class="headerlink" title="配置主服务器"></a>配置主服务器</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">主MySQL Server: 10.0.0.3</span><br><span class="line">从MySQL Server: 10.0.0.4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑主服务器配置文件</span></span><br><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>将以下配置信息粘贴至mysqld.cnf 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bind</span>-address	= 10.0.03</span><br><span class="line">server-id		= 1</span><br><span class="line">log_bin			= /var/<span class="built_in">log</span>/mysql/mysql-bin.log</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bind</span>-address	= 10.0.0.3</span><br><span class="line">server-id		= 1</span><br><span class="line">log_bin			= /var/<span class="built_in">log</span>/mysql/mysql-bin.log</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启MySQL服务</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
@@ -216,14 +216,14 @@ ga('send', 'pageview');
 </li>
 </ol>
 <ol start="2">
-<li><h5 id="创建一个新账户用于连接从服务器"><a href="#创建一个新账户用于连接从服务器" class="headerlink" title="创建一个新账户用于连接从服务器"></a>创建一个新账户用于连接从服务器</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 创建用户</span></span><br><span class="line"> <span class="keyword">create</span> <span class="keyword">user</span> rpl_user@<span class="number">10.0</span><span class="number">.04</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'password'</span>;</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 授权用户</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">replication</span> <span class="keyword">slave</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> rpl_user@<span class="number">10.0</span><span class="number">.04</span>;</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 确认授权</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">grants</span> <span class="keyword">for</span> replica_user@<span class="number">10.0</span><span class="number">.04</span>;</span><br><span class="line"><span class="comment"># 查看主服务器状态</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">master</span> <span class="keyword">status</span>\G</span><br></pre></td></tr></table></figure>
+<li><h5 id="创建一个新账户用于连接从服务器"><a href="#创建一个新账户用于连接从服务器" class="headerlink" title="创建一个新账户用于连接从服务器"></a>创建一个新账户用于连接从服务器</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 创建用户</span></span><br><span class="line"> <span class="keyword">create</span> <span class="keyword">user</span> rpl_user@<span class="number">10.0</span><span class="number">.0</span><span class="number">.4</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'password'</span>;</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 授权用户</span></span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">replication</span> <span class="keyword">slave</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> rpl_user@<span class="number">10.0</span><span class="number">.0</span><span class="number">.4</span>;</span><br><span class="line">   </span><br><span class="line"><span class="comment"># 确认授权</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">grants</span> <span class="keyword">for</span> replica_user@<span class="number">10.0</span><span class="number">.0</span><span class="number">.4</span>;</span><br><span class="line"><span class="comment"># 查看主服务器状态</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">master</span> <span class="keyword">status</span>\G</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol start="3">
 <li><h5 id="配置从服务器"><a href="#配置从服务器" class="headerlink" title="配置从服务器"></a>配置从服务器</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编辑从服务器配置文件</span></span><br><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>将以下配置信息粘贴至mysqld.cnf 文件.</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bind-address</span>	= <span class="number">10.0</span>.<span class="number">04</span></span><br><span class="line"><span class="attr">server-id</span>		= <span class="number">2</span></span><br><span class="line"><span class="attr">log_bin</span>			= /var/log/mysql/mysql-bin.log</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bind-address</span>	= <span class="number">10.0</span>.<span class="number">0.4</span></span><br><span class="line"><span class="attr">server-id</span>		= <span class="number">2</span></span><br><span class="line"><span class="attr">log_bin</span>			= /var/log/mysql/mysql-bin.log</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启MySQL服务</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
@@ -232,7 +232,7 @@ ga('send', 'pageview');
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置从服务器获取主服务器信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> MASTER_LOG_POS 使用命令show master status\G查看的File:mysql-bin.xx 对应填写即可 </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> MASTER_LOG_FILE 使用命令show master status\G查看的Position: xx 对应填写即可 </span></span><br><span class="line">CHANGE MASTER TO MASTER_HOST='10.0.03',</span><br><span class="line">MASTER_USER='rpl_user',</span><br><span class="line">MASTER_PASSWORD='password',</span><br><span class="line">MASTER_LOG_FILE='mysql-bin.000002',</span><br><span class="line">MASTER_LOG_POS=155;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> MASTER_LOG_POS 使用命令show master status\G查看的File:mysql-bin.xx 对应填写即可 </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> MASTER_LOG_FILE 使用命令show master status\G查看的Position: xx 对应填写即可 </span></span><br><span class="line">CHANGE MASTER TO MASTER_HOST='10.0.0.3',</span><br><span class="line">MASTER_USER='rpl_user',</span><br><span class="line">MASTER_PASSWORD='password',</span><br><span class="line">MASTER_LOG_FILE='mysql-bin.000002',</span><br><span class="line">MASTER_LOG_POS=155;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动从属线程</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span> <span class="keyword">slave</span>;</span><br></pre></td></tr></table></figure>
@@ -268,7 +268,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-08-04T17:38:21.064Z" itemprop="dateUpdated">2019-08-05 01:38:21</time>
+    最后更新时间：<time datetime="2019-08-04T23:32:33.275Z" itemprop="dateUpdated">2019-08-05 07:32:33</time>
 </span><br>
 
 
