@@ -23,25 +23,25 @@ ga('send', 'pageview');
     
     
     
-    <title>vps连接因密钥问题产生错误 | Myblog | 联系作者：eGlhb2JlbnhpbkBnbWFpbC5jb20=</title>
+    <title>SSH - 远程主机识别已更改，产生错误。 | Myblog | 联系作者：eGlhb2JlbnhpbkBnbWFpbC5jb20=</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="ssh-keygen">
-    <meta name="description" content="记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f &quot;~/.s">
+    <meta name="description" content="记录下今天连接vps出现的问题,因为重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。错误信息：  WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。解决方法，移除本地主机储存的密钥1234567# 拷贝密钥到远程计算机调试ssh-copy-id root@ip -p port  -vvWAR">
 <meta name="keywords" content="ssh-keygen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vps连接因密钥问题产生错误">
+<meta property="og:title" content="SSH - 远程主机识别已更改，产生错误。">
 <meta property="og:url" content="https://benxin.xyz/2019/08/01/ssh-keygen-wrong/index.html">
 <meta property="og:site_name" content="Myblog">
-<meta property="og:description" content="记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f &quot;~/.s">
+<meta property="og:description" content="记录下今天连接vps出现的问题,因为重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。错误信息：  WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。解决方法，移除本地主机储存的密钥1234567# 拷贝密钥到远程计算机调试ssh-copy-id root@ip -p port  -vvWAR">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-01T14:16:56.000Z">
+<meta property="og:updated_time" content="2019-08-04T06:32:10.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vps连接因密钥问题产生错误">
-<meta name="twitter:description" content="记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。123456789# ip vps的ip prot vps的protssh-keygen -R    # 无效错误依旧ssh-keygen -f &quot;~/.s">
+<meta name="twitter:title" content="SSH - 远程主机识别已更改，产生错误。">
+<meta name="twitter:description" content="记录下今天连接vps出现的问题,因为重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。错误信息：  WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。解决方法，移除本地主机储存的密钥1234567# 拷贝密钥到远程计算机调试ssh-copy-id root@ip -p port  -vvWAR">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -133,7 +133,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">vps连接因密钥问题产生错误</div>
+        <div class="flex-col header-title ellipsis">SSH - 远程主机识别已更改，产生错误。</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -155,7 +155,7 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">vps连接因密钥问题产生错误</h1>
+        <h1 class="title">SSH - 远程主机识别已更改，产生错误。</h1>
         <h5 class="subtitle">
             
                 <time datetime="2019-08-01T15:07:41.229Z" itemprop="datePublished" class="page-time">
@@ -180,7 +180,7 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#记录下今天连接vps出现的问题-因为vps重装系统由CentOS切换到了Debian-但是本地客户端还储存着远程主机之前的私钥导致以下错误。"><span class="post-toc-number">1.</span> <span class="post-toc-text">记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-。"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#记录下今天连接vps出现的问题-因为重装系统由CentOS切换到了Debian-但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。"><span class="post-toc-number">1.</span> <span class="post-toc-text">记录下今天连接vps出现的问题,因为重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#错误信息：-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-。"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">错误信息：  WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#解决方法，移除本地主机储存的密钥"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">解决方法，移除本地主机储存的密钥</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#移除主机之前的标识信息解决问题！"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">移除主机之前的标识信息解决问题！</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -188,7 +188,7 @@ ga('send', 'pageview');
 <article id="post-ssh-keygen-wrong" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">vps连接因密钥问题产生错误</h1>
+        <h1 class="post-card-title">SSH - 远程主机识别已更改，产生错误。</h1>
         <div class="post-meta">
             <time class="post-time" title="2019-08-01 23:07:41" datetime="2019-08-01T15:07:41.229Z" itemprop="datePublished">2019-08-01</time>
 
@@ -201,7 +201,8 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h5 id="记录下今天连接vps出现的问题-因为vps重装系统由CentOS切换到了Debian-但是本地客户端还储存着远程主机之前的私钥导致以下错误。"><a href="#记录下今天连接vps出现的问题-因为vps重装系统由CentOS切换到了Debian-但是本地客户端还储存着远程主机之前的私钥导致以下错误。" class="headerlink" title="记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。"></a>记录下今天连接vps出现的问题,因为vps重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的私钥导致以下错误。</h5><h6 id="WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-。"><a href="#WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-。" class="headerlink" title="WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。"></a>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ip vps的ip prot vps的prot</span></span><br><span class="line">ssh-keygen -R    # 无效错误依旧</span><br><span class="line">ssh-keygen -f "~/.ssh/known_hosts" -R ip: port  # 重试发现错误依旧</span><br><span class="line">ssh-copy-id root@ip -p port</span><br><span class="line">vi ~/.ssh/known_hosts  # 将已知主机密钥全部移除 dd</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者 直接删除 known_hosts</span></span><br><span class="line">rm ~/.ssh/known_hosts</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重新连接输入密码连接成功!</span></span><br><span class="line">ssh-copy-id root@ip -p port</span><br></pre></td></tr></table></figure>
+            <h5 id="记录下今天连接vps出现的问题-因为重装系统由CentOS切换到了Debian-但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。"><a href="#记录下今天连接vps出现的问题-因为重装系统由CentOS切换到了Debian-但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。" class="headerlink" title="记录下今天连接vps出现的问题,因为重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。"></a>记录下今天连接vps出现的问题,因为重装系统由CentOS切换到了Debian,但是本地客户端还储存着远程主机之前的公钥信息导致以下错误。</h5><h6 id="错误信息：-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-。"><a href="#错误信息：-WARNING-REMOTE-HOST-IDENTIFICATION-HAS-CHANGED-。" class="headerlink" title="错误信息：  WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。"></a>错误信息：  WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   。</h6><h6 id="解决方法，移除本地主机储存的密钥"><a href="#解决方法，移除本地主机储存的密钥" class="headerlink" title="解决方法，移除本地主机储存的密钥"></a>解决方法，移除本地主机储存的密钥</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拷贝密钥到远程计算机调试</span></span><br><span class="line">ssh-copy-id root@ip -p port  -vv</span><br><span class="line">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 上stackoverflow 说使用这个最简单的方法但问题没有解决。</span></span><br><span class="line"><span class="comment"># &lt;host&gt;  远程计算机名/ip</span></span><br><span class="line">ssh-keygen -R &lt;host&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="移除主机之前的标识信息解决问题！"><a href="#移除主机之前的标识信息解决问题！" class="headerlink" title="移除主机之前的标识信息解决问题！"></a>移除主机之前的标识信息解决问题！</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 暴力解决，移除文件让它重新生成！</span></span><br><span class="line">rm ~/.ssh/known_hosts</span><br><span class="line"><span class="comment"># 也可以这么做，清空文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">''</span> &gt; ~/.ssh/known_hosts</span><br><span class="line">重新上传公钥ok</span><br><span class="line">ssh-copy-id root@ip -p port</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -210,7 +211,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-08-01T14:16:56.000Z" itemprop="dateUpdated">2019-08-01 22:16:56</time>
+    最后更新时间：<time datetime="2019-08-04T06:32:10.201Z" itemprop="dateUpdated">2019-08-04 14:32:10</time>
 </span><br>
 
 
@@ -242,7 +243,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《vps连接因密钥问题产生错误》 — Myblog&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《SSH - 远程主机识别已更改，产生错误。》 — Myblog&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -252,7 +253,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《vps连接因密钥问题产生错误》 — Myblog&source=学习笔记" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《SSH - 远程主机识别已更改，产生错误。》 — Myblog&source=学习笔记" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -262,7 +263,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vps连接因密钥问题产生错误》 — Myblog&url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&via=https://benxin.xyz" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SSH - 远程主机识别已更改，产生错误。》 — Myblog&url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&via=https://benxin.xyz" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -392,7 +393,7 @@ ga('send', 'pageview');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《vps连接因密钥问题产生错误》 — Myblog&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《SSH - 远程主机识别已更改，产生错误。》 — Myblog&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -402,7 +403,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《vps连接因密钥问题产生错误》 — Myblog&source=学习笔记" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&title=《SSH - 远程主机识别已更改，产生错误。》 — Myblog&source=学习笔记" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -412,7 +413,7 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vps连接因密钥问题产生错误》 — Myblog&url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&via=https://benxin.xyz" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SSH - 远程主机识别已更改，产生错误。》 — Myblog&url=https://benxin.xyz/2019/08/01/ssh-keygen-wrong/&via=https://benxin.xyz" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
