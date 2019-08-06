@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     
 <!-- Google Analytics -->
 <script>
@@ -30,18 +30,18 @@ ga('send', 'pageview');
     
     
     <meta name="keywords" content="PyMySQL">
-    <meta name="description" content="使用PyMySQL库连接MySQL数据库实现增删改查 先决条件数据库版本要求  MySQL &amp;gt;= 5.5 MariaDB &amp;gt;= 5.5   安装PyMySQL 1python3 -m pip install PyMySQL    部分参数说明 12345678910111213141516171819202122232425# PyMySQL 相关参数# 连接数据库host	 # 服务">
+    <meta name="description" content="使用PyMySQL库连接MySQL数据库实现增删改查 先决条件数据库版本要求  MySQL &amp;gt;= 5.5 MariaDB &amp;gt;= 5.5   安装PyMySQL 1python3 -m pip install PyMySQL       部分参数说明 12345678910111213141516171819202122232425# PyMySQL 相关参数# 连接数据库host	 #">
 <meta name="keywords" content="PyMySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用PyMySQL库连接MySQL数据库实现增删改查">
 <meta property="og:url" content="https://benxin.xyz/2019/08/05/PyMySQL-action/index.html">
 <meta property="og:site_name" content="Myblog">
-<meta property="og:description" content="使用PyMySQL库连接MySQL数据库实现增删改查 先决条件数据库版本要求  MySQL &amp;gt;= 5.5 MariaDB &amp;gt;= 5.5   安装PyMySQL 1python3 -m pip install PyMySQL    部分参数说明 12345678910111213141516171819202122232425# PyMySQL 相关参数# 连接数据库host	 # 服务">
+<meta property="og:description" content="使用PyMySQL库连接MySQL数据库实现增删改查 先决条件数据库版本要求  MySQL &amp;gt;= 5.5 MariaDB &amp;gt;= 5.5   安装PyMySQL 1python3 -m pip install PyMySQL       部分参数说明 12345678910111213141516171819202122232425# PyMySQL 相关参数# 连接数据库host	 #">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-08-05T09:52:22.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用PyMySQL库连接MySQL数据库实现增删改查">
-<meta name="twitter:description" content="使用PyMySQL库连接MySQL数据库实现增删改查 先决条件数据库版本要求  MySQL &amp;gt;= 5.5 MariaDB &amp;gt;= 5.5   安装PyMySQL 1python3 -m pip install PyMySQL    部分参数说明 12345678910111213141516171819202122232425# PyMySQL 相关参数# 连接数据库host	 # 服务">
+<meta name="twitter:description" content="使用PyMySQL库连接MySQL数据库实现增删改查 先决条件数据库版本要求  MySQL &amp;gt;= 5.5 MariaDB &amp;gt;= 5.5   安装PyMySQL 1python3 -m pip install PyMySQL       部分参数说明 12345678910111213141516171819202122232425# PyMySQL 相关参数# 连接数据库host	 #">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -54,7 +54,7 @@ ga('send', 'pageview');
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide">
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -67,56 +67,56 @@ ga('send', 'pageview');
         <hgroup class="introduce">
           <h5 class="nickname">benxin</h5>
           <a href="mailto:undefined" class="mail">
-        </a></hgroup>
+        </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/">
+              <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives">
+              <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags">
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories">
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/benxin" target="_blank">
+              <a href="https://github.com/benxin" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://t.me/benson_233" target="_blank">
+              <a href="https://t.me/benson_233" target="_blank" >
                 <i class="icon icon-lg icon-telegram"></i>
                 Telegram
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://twitter.com/fish__xyz" target="_blank">
+              <a href="https://twitter.com/fish__xyz" target="_blank" >
                 <i class="icon icon-lg icon-twitter"></i>
                 Twitter
               </a>
@@ -185,12 +185,13 @@ ga('send', 'pageview');
     </aside>
 
 
-<article id="post-PyMySQL-action" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-PyMySQL-action"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">使用PyMySQL库连接MySQL数据库实现增删改查</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-08-05 17:49:30" datetime="2019-08-05T09:49:30.523Z" itemprop="datePublished">2019-08-05</time>
+            <time class="post-time" title="2019-08-05 17:49:30" datetime="2019-08-05T09:49:30.523Z"  itemprop="datePublished">2019-08-05</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/MySQL/">MySQL</a></li></ul>
@@ -210,6 +211,9 @@ ga('send', 'pageview');
 </li>
 <li><p>安装PyMySQL</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip install PyMySQL</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ol>
 <ol start="3">
@@ -218,6 +222,7 @@ ga('send', 'pageview');
 </li>
 <li><p>demo</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding:utf-8 _*-</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">@Author: benxin</span></span><br><span class="line"><span class="string">@File:   sql_demo.py</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pymysql <span class="keyword">import</span> connect, cursors</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlAction</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">'''数据库曾删改查'''</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.connection = connect(host=<span class="string">'localhost'</span>,</span><br><span class="line">                                  user=<span class="string">'root'</span>,</span><br><span class="line">                                  password=<span class="string">'pwd'</span>,</span><br><span class="line">                                  db=<span class="string">'db01'</span>,</span><br><span class="line">                                  charset=<span class="string">'utf8mb4'</span>,</span><br><span class="line">                                  cursorclass=cursors.DictCursor)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">query_data</span><span class="params">(self, query)</span>:</span></span><br><span class="line">        <span class="comment"># 查询数据</span></span><br><span class="line">        <span class="keyword">if</span> query:</span><br><span class="line">            <span class="keyword">with</span> self.connection.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">                sql = query</span><br><span class="line">                cursor.execute(sql)</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    self.connection.commit()</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    self.connection.rollback()</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="comment"># 查询单条</span></span><br><span class="line">                    <span class="comment"># result = cursor.fetchone()</span></span><br><span class="line">                    <span class="comment"># 查询多条数据</span></span><br><span class="line">                    result = cursor.fetchall()</span><br><span class="line">                    <span class="keyword">for</span> row <span class="keyword">in</span> result:</span><br><span class="line">                        <span class="keyword">if</span> row:</span><br><span class="line">                            print(row[<span class="string">'name'</span>], row[<span class="string">'age'</span>], row[<span class="string">'gender'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert_data</span><span class="params">(self, insert)</span>:</span></span><br><span class="line">        <span class="comment"># 插入数据</span></span><br><span class="line">        <span class="keyword">if</span> insert:</span><br><span class="line"></span><br><span class="line">            <span class="keyword">with</span> self.connection.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">                sql = insert</span><br><span class="line">                cursor.execute(sql)</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    self.connection.commit()</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    self.connection.rollback()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_data</span><span class="params">(self, update)</span>:</span></span><br><span class="line">        <span class="comment"># 更新数据</span></span><br><span class="line">        <span class="keyword">if</span> update:</span><br><span class="line">            <span class="keyword">with</span> self.connection.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">                sql = update</span><br><span class="line">                cursor.execute(sql)</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    self.connection.commit()</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line"></span><br><span class="line">                    self.connection.rollback()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">delete_data</span><span class="params">(self, delete)</span>:</span></span><br><span class="line">        <span class="comment"># 删除数据</span></span><br><span class="line">        <span class="keyword">if</span> delete:</span><br><span class="line">            <span class="keyword">with</span> self.connection.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">                sql = delete</span><br><span class="line">                cursor.execute(sql)</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    self.connection.commit()</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    self.connection.rollback()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 关闭连接</span></span><br><span class="line">        self.connection.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">()</span>:</span></span><br><span class="line">    query = <span class="string">"select * from students;"</span></span><br><span class="line">    insert = <span class="string">"insert into students (id,name,age,height,address) values(0,'郭靖',27,178.00,'蒙古');"</span></span><br><span class="line">    update = <span class="string">"update students set  height=181.00 where name like '_靖';"</span></span><br><span class="line">    delete = <span class="string">"delete from students where name like '%靖';"</span></span><br><span class="line">    mysql = SqlAction()</span><br><span class="line">    mysql.query_data(query)</span><br><span class="line">    <span class="comment"># mysql.insert_data(insert)</span></span><br><span class="line">    <span class="comment"># mysql.update_data(update)</span></span><br><span class="line">    <span class="comment"># mysql.delete_data(delete)</span></span><br><span class="line">    mysql.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">run()</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 

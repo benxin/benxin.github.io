@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     
 <!-- Google Analytics -->
 <script>
@@ -54,7 +54,7 @@ ga('send', 'pageview');
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide">
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -67,56 +67,56 @@ ga('send', 'pageview');
         <hgroup class="introduce">
           <h5 class="nickname">benxin</h5>
           <a href="mailto:undefined" class="mail">
-        </a></hgroup>
+        </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/">
+              <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives">
+              <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags">
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories">
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/benxin" target="_blank">
+              <a href="https://github.com/benxin" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://t.me/benson_233" target="_blank">
+              <a href="https://t.me/benson_233" target="_blank" >
                 <i class="icon icon-lg icon-telegram"></i>
                 Telegram
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://twitter.com/fish__xyz" target="_blank">
+              <a href="https://twitter.com/fish__xyz" target="_blank" >
                 <i class="icon icon-lg icon-twitter"></i>
                 Twitter
               </a>
@@ -185,12 +185,13 @@ ga('send', 'pageview');
     </aside>
 
 
-<article id="post-update-Kernel" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-update-Kernel"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">Debian&Ubuntu 更新内核</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-08-03 01:37:16" datetime="2019-08-02T17:37:16.920Z" itemprop="datePublished">2019-08-03</time>
+            <time class="post-time" title="2019-08-03 01:37:16" datetime="2019-08-02T17:37:16.920Z"  itemprop="datePublished">2019-08-03</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
@@ -215,13 +216,19 @@ ga('send', 'pageview');
 <p>   Ubuntu 可以去以上两站点查看相应的源进行配置,我自己在用Debian因为比较稳定.</p>
 <p>   粘贴以下内容到你的sources.list文件 CTRL+x 保存退出</p>
    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># debian-official</span></span><br><span class="line">deb http://security.debian.org/  buster/updates main</span><br><span class="line">deb-src http://security.debian.org/  buster/updates main</span><br><span class="line"></span><br><span class="line"><span class="comment"># huawei</span></span><br><span class="line">deb https://mirrors.huaweicloud.com/debian/ buster main contrib non-free</span><br><span class="line">deb https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free</span><br><span class="line">deb https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free</span><br><span class="line"></span><br><span class="line"><span class="comment"># tsinghua</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free</span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="2">
 <li><p>更新</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
 <p>查看当前内核版本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -ra</span><br></pre></td></tr></table></figure>
+
 <p>查找可更新的内核</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache search linux-image | grep amd64</span><br></pre></td></tr></table></figure>
+
 <p>安装内核</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -t buster linux-image-amd64</span><br></pre></td></tr></table></figure>
 </li>
@@ -233,8 +240,10 @@ ga('send', 'pageview');
 </li>
 <li><p>开启 bbr</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"net.core.default_qdisc=fq"</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"net.ipv4.tcp_congestion_control=bbr"</span> &gt;&gt; /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
+
 <p> 查看效果</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo lsmod | grep bbr   </span><br><span class="line"><span class="comment"># 开启成功效果如下</span></span><br><span class="line">tcp_bbr                20480  29</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 

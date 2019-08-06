@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     
 <!-- Google Analytics -->
 <script>
@@ -54,7 +54,7 @@ ga('send', 'pageview');
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide">
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -67,56 +67,56 @@ ga('send', 'pageview');
         <hgroup class="introduce">
           <h5 class="nickname">benxin</h5>
           <a href="mailto:undefined" class="mail">
-        </a></hgroup>
+        </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/">
+              <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives">
+              <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags">
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories">
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/benxin" target="_blank">
+              <a href="https://github.com/benxin" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://t.me/benson_233" target="_blank">
+              <a href="https://t.me/benson_233" target="_blank" >
                 <i class="icon icon-lg icon-telegram"></i>
                 Telegram
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://twitter.com/fish__xyz" target="_blank">
+              <a href="https://twitter.com/fish__xyz" target="_blank" >
                 <i class="icon icon-lg icon-twitter"></i>
                 Twitter
               </a>
@@ -185,12 +185,13 @@ ga('send', 'pageview');
     </aside>
 
 
-<article id="post-debian-update" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-debian-update"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">使用命令将Debian 9 更新至最新版本 Debian ‎10 (Buster)</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-08-03 12:30:36" datetime="2019-08-03T04:30:36.748Z" itemprop="datePublished">2019-08-03</time>
+            <time class="post-time" title="2019-08-03 12:30:36" datetime="2019-08-03T04:30:36.748Z"  itemprop="datePublished">2019-08-03</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
@@ -204,11 +205,17 @@ ga('send', 'pageview');
             <h1 id="Debian-‎10-Buster-7月6号发布当天我就更新了，截至今天都快一个月了，这期间使用都非常稳定，今天就记录下更方式。"><a href="#Debian-‎10-Buster-7月6号发布当天我就更新了，截至今天都快一个月了，这期间使用都非常稳定，今天就记录下更方式。" class="headerlink" title="Debian ‎10 (Buster) 7月6号发布当天我就更新了，截至今天都快一个月了，这期间使用都非常稳定，今天就记录下更方式。"></a>Debian ‎10 (Buster) 7月6号发布当天我就更新了，截至今天都快一个月了，这期间使用都非常稳定，今天就记录下更方式。</h1><ul>
 <li><p>更新镜像文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br><span class="line">nano /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 将以下镜像url粘贴至你的sources.list文件上,或继续使用你之前使用的源.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># debian-official</span></span><br><span class="line">deb http://security.debian.org/  buster/updates main</span><br><span class="line">deb-src http://security.debian.org/  buster/updates main</span><br><span class="line"></span><br><span class="line"><span class="comment"># aws</span></span><br><span class="line">deb http://cdn-aws.deb.debian.org/debian stable main</span><br><span class="line">deb http://cdn-aws.deb.debian.org/debian-security stable/updates main</span><br><span class="line">deb https://deb.debian.org/debian stable main</span><br><span class="line">deb https://deb.debian.org/debian-security stable/updates main</span><br><span class="line"></span><br><span class="line"><span class="comment"># huawei</span></span><br><span class="line">deb https://mirrors.huaweicloud.com/debian/ buster main contrib non-free</span><br><span class="line">deb https://mirrors.huaweicloud.com/debian/ buster-updates main contrib non-free</span><br><span class="line">deb https://mirrors.huaweicloud.com/debian/ buster-backports main contrib non-free</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
 <li><p>继续使用你之前使用Debian源 ,使用以下命令全局替换stretch 至 buster</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/stretch/buster/g'</span> /etc/apt/sources.list</span><br><span class="line">sed -i <span class="string">'s/stretch/buster/g'</span> /etc/apt/sources.list.d/*.list</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <ul>
@@ -226,6 +233,7 @@ ga('send', 'pageview');
 </li>
 <li><p>查看版信息</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br><span class="line"><span class="comment"># 使用screenfetch查看更加详细的信息</span></span><br><span class="line">apt install screenfetch</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 

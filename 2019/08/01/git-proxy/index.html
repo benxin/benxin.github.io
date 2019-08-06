@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     
 <!-- Google Analytics -->
 <script>
@@ -54,7 +54,7 @@ ga('send', 'pageview');
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide">
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -67,56 +67,56 @@ ga('send', 'pageview');
         <hgroup class="introduce">
           <h5 class="nickname">benxin</h5>
           <a href="mailto:undefined" class="mail">
-        </a></hgroup>
+        </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/">
+              <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives">
+              <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags">
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories">
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/benxin" target="_blank">
+              <a href="https://github.com/benxin" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://t.me/benson_233" target="_blank">
+              <a href="https://t.me/benson_233" target="_blank" >
                 <i class="icon icon-lg icon-telegram"></i>
                 Telegram
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://twitter.com/fish__xyz" target="_blank">
+              <a href="https://twitter.com/fish__xyz" target="_blank" >
                 <i class="icon icon-lg icon-twitter"></i>
                 Twitter
               </a>
@@ -185,12 +185,13 @@ ga('send', 'pageview');
     </aside>
 
 
-<article id="post-git-proxy" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-git-proxy"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">Git 使用代理</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-08-01 23:07:41" datetime="2019-08-01T15:07:41.213Z" itemprop="datePublished">2019-08-01</time>
+            <time class="post-time" title="2019-08-01 23:07:41" datetime="2019-08-01T15:07:41.213Z"  itemprop="datePublished">2019-08-01</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/GitHub/">GitHub</a></li></ul>
@@ -208,7 +209,9 @@ ga('send', 'pageview');
 </li>
 </ul>
 <h4 id="方法一使用命令行"><a href="#方法一使用命令行" class="headerlink" title="方法一使用命令行"></a>方法一使用命令行</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 以下使用http代理</span></span><br><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 以下使用socks5代理</span></span><br><span class="line">git config --global http.proxy socks5://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy socks5://127.0.0.1:1080</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 取消代理</span></span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
+
 <h4 id="方法二-直接修改配置文件"><a href="#方法二-直接修改配置文件" class="headerlink" title="方法二  直接修改配置文件"></a>方法二  直接修改配置文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 打开git配置文件</span></span><br><span class="line">nano ~/.gitconfig</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 复制以下配置 ctrl+<span class="built_in">shift</span>+v 粘贴 ctrl+x 输入y保存</span></span><br><span class="line">[https]</span><br><span class="line">proxy = https://127.0.0.1:1080</span><br><span class="line">[http]</span><br><span class="line">proxy = http://127.0.0.1:1080</span><br><span class="line"></span><br><span class="line">[http]</span><br><span class="line">     proxy = socks5://127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">     proxy = socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
 
         </div>
 
