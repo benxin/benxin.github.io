@@ -47,6 +47,8 @@ ga('send', 'pageview');
 <meta name="twitter:description" content="Debian 登录后成功,却看不到桌面解决方法.事件可能原因?今天上重启了系统之后,和以往一样正常登录操作系统,输入密码登录成功!却发现桌面除了背景图片什么也看不到,也无法使用terminal,这时候先想到了万能的重启,好的重启试试,再次登录发现问题依旧,如是我在想最近执行了什么操作,思考了一会想起,好像昨天执行了卸载gnome-shell相关的操作.在想这能是与这个有关.好了废话不多说,下面看下">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190806111651.png">
     
+        <link rel="alternate" type="application/atom+xml" title="benxin" href="/atom.xml">
+    
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
@@ -247,7 +249,7 @@ ga('send', 'pageview');
 <ol start="4">
 <li>卸载重装gnome</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 卸载</span></span><br><span class="line">sudo apt-get autoremove gdm3</span><br><span class="line">sudo apt-get autoremove --purge gnome*</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启</span></span><br><span class="line">sudo shutdown -r now   #或者使用  sudo reboot   </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启后登录系统,重新安装gnome</span></span><br><span class="line">sudo apt install gnome</span><br><span class="line">apt-get install task-gnome-desktop</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 卸载</span><br><span class="line">sudo apt-get autoremove gdm3</span><br><span class="line">sudo apt-get autoremove --purge gnome*</span><br><span class="line"><span class="meta">#</span> 重启</span><br><span class="line">sudo shutdown -r now   #或者使用  sudo reboot   </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 重启后登录系统,重新安装gnome</span><br><span class="line">sudo apt install gnome</span><br><span class="line">apt-get install task-gnome-desktop</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -409,6 +411,8 @@ ga('send', 'pageview');
         
 
         <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
             <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
