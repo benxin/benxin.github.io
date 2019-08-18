@@ -38,7 +38,7 @@ ga('send', 'pageview');
 <meta property="og:site_name" content="Benxin&#39;s blog">
 <meta property="og:description" content="Python3  Flask-SQLAlchemy连接 MySQL报错”no module named ‘mysqldb’ “ 错误信息 1234# 没有名为mysqldb的模块# 在python2的时候连接驱动模块是: MySQL-python,在python3中使用的是mysqlclient它是MySQL-python的一个分支,增加了对Python3的支持,及修复了错误. # 原因是没有正确">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-18T05:40:11.000Z">
+<meta property="og:updated_time" content="2019-08-18T05:54:27.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flask-SQLAlchemy连接MySQL报错处理.(Python3)">
 <meta name="twitter:description" content="Python3  Flask-SQLAlchemy连接 MySQL报错”no module named ‘mysqldb’ “ 错误信息 1234# 没有名为mysqldb的模块# 在python2的时候连接驱动模块是: MySQL-python,在python3中使用的是mysqlclient它是MySQL-python的一个分支,增加了对Python3的支持,及修复了错误. # 原因是没有正确">
@@ -220,7 +220,7 @@ ga('send', 'pageview');
 </li>
 </ol>
 <ol start="2">
-<li><p>解决方发</p>
+<li><p>解决方法</p>
 <p>stackoverflow 上开发者提供的方法:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 将<span class="built_in">pwd</span>替换成你的数据库密码</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将dbname替换成你要连接的数据库</span></span><br><span class="line">SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:pwd@localhost/dbname"</span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果你还没有在你的虚拟环境中安装PyMySQL使用以下命令安装</span></span><br><span class="line">python3 -m pip install PyMySQL</span><br></pre></td></tr></table></figure>
 
@@ -240,7 +240,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-08-18T05:40:11.000Z" itemprop="dateUpdated">2019-08-18 13:40:11</time>
+    最后更新时间：<time datetime="2019-08-18T05:54:27.486Z" itemprop="dateUpdated">2019-08-18 13:54:27</time>
 </span><br>
 
 
