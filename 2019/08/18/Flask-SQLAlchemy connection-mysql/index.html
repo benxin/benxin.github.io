@@ -213,7 +213,7 @@ ga('send', 'pageview');
         <div class="post-content" id="post-content" itemprop="postContent">
             <h4 id="Python3-Flask-SQLAlchemy连接-MySQL报错”no-module-named-‘mysqldb’-“"><a href="#Python3-Flask-SQLAlchemy连接-MySQL报错”no-module-named-‘mysqldb’-“" class="headerlink" title="Python3  Flask-SQLAlchemy连接 MySQL报错”no module named ‘mysqldb’ “"></a>Python3  Flask-SQLAlchemy连接 MySQL报错”no module named ‘mysqldb’ “</h4><ol>
 <li><p>错误信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 没有名为mysqldb的模块</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在python2的时候连接驱动模块是: MySQL-python,在python3中使用的是mysqlclient它是MySQL-python的一个分支,增加了对Python3的支持,及修复了错误. </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 原因是没有正确的安装连接MySQL的驱动</span></span><br><span class="line">modulenotfounderror no module named 'mysqldb'</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 没有名为mysqldb的模块</span><br><span class="line"><span class="meta">#</span> 在python2的时候连接驱动模块是: MySQL-python,在python3中使用的是mysqlclient它是MySQL-python的一个分支,增加了对Python3的支持,及修复了错误. </span><br><span class="line"><span class="meta">#</span> 原因是没有正确的安装连接MySQL的驱动</span><br><span class="line">modulenotfounderror no module named 'mysqldb'</span><br></pre></td></tr></table></figure>
 
 
 
@@ -222,7 +222,7 @@ ga('send', 'pageview');
 <ol start="2">
 <li><p>解决方法</p>
 <p>stackoverflow 上开发者提供的方法:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 将<span class="built_in">pwd</span>替换成你的数据库密码</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将dbname替换成你要连接的数据库</span></span><br><span class="line">SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:pwd@localhost/dbname"</span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果你还没有在你的虚拟环境中安装PyMySQL使用以下命令安装</span></span><br><span class="line">python3 -m pip install PyMySQL</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 将pwd替换成你的数据库密码</span><br><span class="line"><span class="meta">#</span> 将dbname替换成你要连接的数据库</span><br><span class="line">SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:pwd@localhost/dbname"</span><br><span class="line"><span class="meta">#</span> 如果你还没有在你的虚拟环境中安装PyMySQL使用以下命令安装</span><br><span class="line">python3 -m pip install PyMySQL</span><br></pre></td></tr></table></figure>
 
 <p>Python官方文档提供的解决方法: </p>
 <blockquote>
@@ -317,7 +317,14 @@ ga('send', 'pageview');
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/09/22/vps&ss/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">使用vps搭建shadowsocks</h4>
+      </a>
+    </div>
   
 
   

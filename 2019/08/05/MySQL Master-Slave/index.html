@@ -214,7 +214,7 @@ ga('send', 'pageview');
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="MySQL主从配置-适用于MySQL-8-0"><a href="#MySQL主从配置-适用于MySQL-8-0" class="headerlink" title="MySQL主从配置(适用于MySQL 8.0+)"></a>MySQL主从配置(适用于MySQL 8.0+)</h1><ol>
-<li><h5 id="配置主服务器"><a href="#配置主服务器" class="headerlink" title="配置主服务器"></a>配置主服务器</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">主MySQL Server: 10.0.0.3</span><br><span class="line">从MySQL Server: 10.0.0.4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑主服务器配置文件</span></span><br><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
+<li><h5 id="配置主服务器"><a href="#配置主服务器" class="headerlink" title="配置主服务器"></a>配置主服务器</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">主MySQL Server: 10.0.0.3</span><br><span class="line">从MySQL Server: 10.0.0.4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 编辑主服务器配置文件</span><br><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>将以下配置信息粘贴至mysqld.cnf 文件</p>
