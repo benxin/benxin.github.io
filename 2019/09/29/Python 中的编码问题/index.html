@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-136378764-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<!-- End Google Analytics -->
+
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError | Benxin&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Python">
+    <meta name="description" content="Python 中的编码问题.相信大部分使用python的用户,都遇到过Python的编解码出错的问题,很不幸我也遇到过,今天写个笔记,当备忘.         Unicode 计算机科学领域里的一项业界标准 (中文：万国码、国际码)   UTF-8 是一种针对Unicode的可变长度字符编码,它可以用来表示Unicode标准中的任意字符,UTF-8是Unicode的实现方式之一.   GB2312">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError">
+<meta property="og:url" content="https://benxin.xyz/2019/09/29/Python 中的编码问题/index.html">
+<meta property="og:site_name" content="Benxin&#39;s blog">
+<meta property="og:description" content="Python 中的编码问题.相信大部分使用python的用户,都遇到过Python的编解码出错的问题,很不幸我也遇到过,今天写个笔记,当备忘.         Unicode 计算机科学领域里的一项业界标准 (中文：万国码、国际码)   UTF-8 是一种针对Unicode的可变长度字符编码,它可以用来表示Unicode标准中的任意字符,UTF-8是Unicode的实现方式之一.   GB2312">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-29T10:00:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError">
+<meta name="twitter:description" content="Python 中的编码问题.相信大部分使用python的用户,都遇到过Python的编解码出错的问题,很不幸我也遇到过,今天写个笔记,当备忘.         Unicode 计算机科学领域里的一项业界标准 (中文：万国码、国际码)   UTF-8 是一种针对Unicode的可变长度字符编码,它可以用来表示Unicode标准中的任意字符,UTF-8是Unicode的实现方式之一.   GB2312">
+    
+        <link rel="alternate" type="application/atom+xml" title="Benxin&#39;s blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/debian.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/cat.gif">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">benxin</h5>
+          <a href="mailto:benxin.me@gmail.com" title="benxin.me@gmail.com" class="mail">benxin.me@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/benxin" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://t.me/benxin" target="_blank" >
+                <i class="icon icon-lg icon-telegram"></i>
+                Telegram
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://twitter.com/fish__xyz" target="_blank" >
+                <i class="icon icon-lg icon-twitter"></i>
+                Twitter
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/links"  >
+                <i class="icon icon-lg icon-users"></i>
+                友情链接
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-09-29T10:02:51.414Z" itemprop="datePublished" class="page-time">
+  2019-09-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Python-中的编码问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">Python 中的编码问题.</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Python 中的编码问题"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-09-29 18:02:51" datetime="2019-09-29T10:02:51.414Z"  itemprop="datePublished">2019-09-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Python/">Python</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="Python-中的编码问题"><a href="#Python-中的编码问题" class="headerlink" title="Python 中的编码问题."></a>Python 中的编码问题.</h3><p>相信大部分使用python的用户,都遇到过Python的编解码出错的问题,很不幸我也遇到过,今天写个笔记,当备忘.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Unicode</td>
+<td>计算机科学领域里的一项业界标准 (中文：万国码、国际码)</td>
+</tr>
+<tr>
+<td>UTF-8</td>
+<td>是一种针对Unicode的可变长度字符编码,它可以用来表示Unicode标准中的任意字符,UTF-8是Unicode的实现方式之一.</td>
+</tr>
+<tr>
+<td>GB2312</td>
+<td>我国早期的,国家标准简体中文字符集,未收录繁体字.</td>
+</tr>
+<tr>
+<td>GB18030</td>
+<td>《信息技术　中文编码字符集》GB18030完全向后兼容GBK, GB2312</td>
+</tr>
+<tr>
+<td>Big5</td>
+<td>Big5 又称为五大码 普及地区 台湾/香港/澳门  (使用繁体中文,正体中文)</td>
+</tr>
+<tr>
+<td>ASCII</td>
+<td>美国信息交换标准代码,是基于拉丁拉丁字母的一套计算机编码系统.</td>
+</tr>
+<tr>
+<td>UnicodeEncodeError</td>
+<td>把字符转换成二进制序列出错</td>
+</tr>
+<tr>
+<td>UnicodeDecodeError</td>
+<td>把二进制序列转换成字符串出错</td>
+</tr>
+<tr>
+<td>bytes  —&gt;  str</td>
+<td>使用decode解码</td>
+</tr>
+<tr>
+<td>str    —&gt;    bytes</td>
+<td>使用encode编码码</td>
+</tr>
+</tbody></table>
+<p>UnicodeEncodeError  demo</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'python之禪'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用utf-8编码</span></span><br><span class="line">In [<span class="number">18</span>]: ret = str.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">In [<span class="number">19</span>]: ret</span><br><span class="line">Out[<span class="number">20</span>]: <span class="string">b'python\xe4\xb9\x8b\xe7\xa6\xaa'</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># 使用big5编码</span></span><br><span class="line">In [<span class="number">22</span>]: ret = str.encode(<span class="string">'big5'</span>)</span><br><span class="line">In [<span class="number">23</span>]: ret</span><br><span class="line">Out[<span class="number">23</span>]: <span class="string">b'python\xa4\xa7\xc1I'</span></span><br><span class="line">    </span><br><span class="line"> <span class="comment"># 使用gb2312进行编码时,编码出错抛出 UnicodeEncodeError</span></span><br><span class="line">In [<span class="number">26</span>]: ret = str.encode(<span class="string">'gb2312'</span>)</span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line">UnicodeEncodeError                        Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-26</span><span class="number">-94</span>b37d4914e4&gt; <span class="keyword">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; 1 ret = str.encode('gb2312')</span><br><span class="line"></span><br><span class="line">UnicodeEncodeError: <span class="string">'gb2312'</span> codec can<span class="string">'t encode character '</span>\u79aa<span class="string">' in position 7: illegal multibyte sequence</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string"># 使用gb18030编码</span></span><br><span class="line"><span class="string">In [63]: str = '</span>python之禪<span class="string">'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In [64]: ret = str.encode('</span>gb18030<span class="string">')</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In [65]: ret</span></span><br><span class="line"><span class="string">Out[65]: b'</span>python\xd6\xae\xb6U<span class="string">'</span></span><br></pre></td></tr></table></figure>
+
+<p>上面使用gb2312 进行编码,出现UnicodeEncodeError错误的原因是,gb2312标准中收录的字符,并未涵盖繁体中文字,而上面的python之禪中的”禪”字正好是一个繁体字,因此使用gb2312就无法对它进行编码,所以会抛出UnicodeEncodeError,而后来使用的gbk和gb18030则解决了这个问题.</p>
+<p>UnicodeDecodeError  demo</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  通过编码汉字'之禪'得到bytes类型数据 b'\xd6\xae\xb6U'</span></span><br><span class="line">In [<span class="number">96</span>]: str = <span class="string">'之禪'</span>.encode(<span class="string">'gb18030'</span>)</span><br><span class="line">In [<span class="number">97</span>]: str</span><br><span class="line">Out[<span class="number">97</span>]: <span class="string">b'\xd6\xae\xb6U'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用big5解码发现汉字'之禪'使用gb18030编码成bytes类型数据后,如果再用big5解码就会货不对版.    </span></span><br><span class="line">In [<span class="number">99</span>]: <span class="string">b'\xd6\xae\xb6U'</span>.decode(<span class="string">'big5'</span>)</span><br><span class="line">Out[<span class="number">99</span>]: <span class="string">'眳貸'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 接下来在使用utf-8看下,直接抛出异常.</span></span><br><span class="line">In [<span class="number">100</span>]: <span class="string">b'\xd6\xae\xb6U'</span>.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line">UnicodeDecodeError                        Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-100</span><span class="number">-48</span>aba63cd6ed&gt; <span class="keyword">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; 1 b'\xd6\xae\xb6U'.decode('utf-8')</span><br><span class="line"></span><br><span class="line">UnicodeDecodeError: <span class="string">'utf-8'</span> codec can<span class="string">'t decode byte 0xb6 in position 2: invalid start byte</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 再看下这个例子: 通过下面这个例子我们可以知道对于拉丁字母,使用utf-8,和gb18030,big5这几种编码方式进行编码,它都占用一个字节.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In [77]: len('</span>p<span class="string">'.encode('</span>utf<span class="number">-8</span><span class="string">'))</span></span><br><span class="line"><span class="string">Out[77]: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In [78]: len('</span>p<span class="string">'.encode('</span>gb18030<span class="string">'))</span></span><br><span class="line"><span class="string">Out[78]: 1</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">In [84]: len('</span>p<span class="string">'.encode('</span>big5<span class="string">'))</span></span><br><span class="line"><span class="string">Out[84]: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string"># 通过下面这个例子我们可以知道对于汉字,使用gb18030,big5编码占用2个字节,而utf-8则占用3个字节.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">In [101]: len('</span>我<span class="string">'.encode('</span>gb18030<span class="string">'))</span></span><br><span class="line"><span class="string">Out[101]: 2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In [102]: len('</span>我<span class="string">'.encode('</span>big5<span class="string">'))</span></span><br><span class="line"><span class="string">Out[102]: 2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">In [103]: len('</span>我<span class="string">'.encode('</span>utf<span class="number">-8</span><span class="string">'))</span></span><br><span class="line"><span class="string">Out[103]: 3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>使用gb18030编码汉字’之禪’得到bytes类型数据 b’\xd6\xae\xb6U’ ,使用big5解码不会抛异常,但解码结果不是我们想要的,因为在big5中b’\xd6\xae\xb6U’对应的解码就是’眳貸’ ,如何证明这个结论,可以使用big5对这两个字进行编码转换成bytes类型数据,查看结果对比即可.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">104</span>]: str = <span class="string">'眳貸'</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">105</span>]: str.encode(<span class="string">'big5'</span>)</span><br><span class="line">Out[<span class="number">105</span>]: <span class="string">b'\xd6\xae\xb6U'</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li>而使用utf-8解码直接抛出异常,这是因为,b’\xd6\xae\xb6U’在’utf-8’中不是有效的utf-8字符串,因此抛出UnicodeDecodeError</li>
+</ul>
+<ul>
+<li><p>添加参数对无法编解码的数据添加预处理措施,防止程序因为遇到无法编解码的数据时,直接抛异常.</p>
+<p>原来使用gb2312对’python之禪’这段字符编码会抛出异常,添加errors参数后会将无法编码的数据替换成?号这样就会知道数据损坏了.</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">In [<span class="number">107</span>]: str = <span class="string">'python之禪'</span>.encode(<span class="string">'gb2312'</span>,errors=<span class="string">'replace'</span>)</span><br><span class="line"></span><br><span class="line">In [<span class="number">108</span>]: str</span><br><span class="line">Out[<span class="number">108</span>]: <span class="string">b'python\xd6\xae?'</span></span><br><span class="line">     </span><br><span class="line">-------------------------------------------------------------------</span><br><span class="line"><span class="comment"># 原来直接使用utf-8对gb18030编码的数据进行解码会直接抛:UnicodeDecodeError现在会使用乱码替换无法解码的部分数据.</span></span><br><span class="line">In [<span class="number">113</span>]: str = <span class="string">'python之禪'</span>.encode(<span class="string">'gb18030'</span>)</span><br><span class="line"></span><br><span class="line">In [<span class="number">114</span>]: str</span><br><span class="line">Out[<span class="number">114</span>]: <span class="string">b'python\xd6\xae\xb6U'</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">115</span>]: str.decode(<span class="string">'utf-8'</span>,errors=<span class="string">'replace'</span>)</span><br><span class="line">Out[<span class="number">115</span>]: <span class="string">'python֮�U'</span></span><br></pre></td></tr></table></figure>
+
+<p>最后总结,编解码时对于数据涉较多语言时应该使用utf-8进行编解码,解码时如过已知编码使用的是某种类型编码方式编码的,就直接使用该编码进行解码是最好的,但如果不确定,则可以优先尝试utf-8.</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-09-29T10:00:22.000Z" itemprop="dateUpdated">2019-09-29 18:00:22</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/09/29/Python 中的编码问题/" target="_blank" rel="external">https://benxin.xyz/2019/09/29/Python 中的编码问题/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://benxin.xyz">
+            <img src="/img/cat.gif" alt="benxin">
+            benxin
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/09/29/Python 中的编码问题/&title=《Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError》 — Benxin's blog&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/09/29/Python 中的编码问题/&title=《Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError》 — Benxin's blog&source=学习笔记" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://benxin.xyz/2019/09/29/Python 中的编码问题/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError》 — Benxin's blog&url=https://benxin.xyz/2019/09/29/Python 中的编码问题/&via=https://benxin.xyz" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://benxin.xyz/2019/09/29/Python 中的编码问题/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/09/22/vps&ss/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">使用vps搭建shadowsocks</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+     -->
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "DxkXnKlILIyG7Bssl6SJFdbF-gzGzoHsz",
+            appKey: "dcEs0zOTF6pcQVrxOWg4mwKQ",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>benxin &copy; 2018 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://benxin.xyz/2019/09/29/Python 中的编码问题/&title=《Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError》 — Benxin's blog&pic=https://benxin.xyz/img/cat.gif" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://benxin.xyz/2019/09/29/Python 中的编码问题/&title=《Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError》 — Benxin's blog&source=学习笔记" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://benxin.xyz/2019/09/29/Python 中的编码问题/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python中的编解码问题,UnicodeEncodeError和UnicodeDecodeError》 — Benxin's blog&url=https://benxin.xyz/2019/09/29/Python 中的编码问题/&via=https://benxin.xyz" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://benxin.xyz/2019/09/29/Python 中的编码问题/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://benxin.xyz/2019/09/29/Python 中的编码问题/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+
+</body>
+</html>
