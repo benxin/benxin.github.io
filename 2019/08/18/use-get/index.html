@@ -30,20 +30,20 @@ ga('send', 'pageview');
     
     
     <meta name="keywords" content="git">
-    <meta name="description" content="Git常用操作命令首次使用设置123456789101112# 安装gitsudo apt install git -y# 个人信息设置  git config --global user.name &quot;用户名&quot;git config --global user.email abc@example.com# 查看配置信息git config --list# 手动编辑配置文件nano ~/.gitcon">
+    <meta name="description" content="Git常用操作命令(备忘)git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计,如今它成为程序员必不可少的一项工具,它能够帮助你更好的管理你的项目代码,接下来就看下git一些基本操作命令. 首次使用设置123456789101112# 安装gitsudo apt install git -y# 个人信息设置  git c">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="https://benxin.xyz/2019/08/18/use-get/index.html">
 <meta property="og:site_name" content="Benxin&#39;s blog">
-<meta property="og:description" content="Git常用操作命令首次使用设置123456789101112# 安装gitsudo apt install git -y# 个人信息设置  git config --global user.name &quot;用户名&quot;git config --global user.email abc@example.com# 查看配置信息git config --list# 手动编辑配置文件nano ~/.gitcon">
+<meta property="og:description" content="Git常用操作命令(备忘)git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计,如今它成为程序员必不可少的一项工具,它能够帮助你更好的管理你的项目代码,接下来就看下git一些基本操作命令. 首次使用设置123456789101112# 安装gitsudo apt install git -y# 个人信息设置  git c">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/benxin/photo/master/img/%2020190818013115.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/benxin/photo/master/img/%2020190818034709.png">
-<meta property="og:updated_time" content="2019-08-17T20:27:38.000Z">
+<meta property="og:updated_time" content="2019-09-30T02:28:01.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令">
-<meta name="twitter:description" content="Git常用操作命令首次使用设置123456789101112# 安装gitsudo apt install git -y# 个人信息设置  git config --global user.name &quot;用户名&quot;git config --global user.email abc@example.com# 查看配置信息git config --list# 手动编辑配置文件nano ~/.gitcon">
+<meta name="twitter:description" content="Git常用操作命令(备忘)git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计,如今它成为程序员必不可少的一项工具,它能够帮助你更好的管理你的项目代码,接下来就看下git一些基本操作命令. 首次使用设置123456789101112# 安装gitsudo apt install git -y# 个人信息设置  git c">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/benxin/photo/master/img/%2020190818013115.png">
     
         <link rel="alternate" type="application/atom+xml" title="Benxin&#39;s blog" href="/atom.xml">
@@ -199,7 +199,7 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git常用操作命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">Git常用操作命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#首次使用设置"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">首次使用设置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基本操作"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">基本操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#远程仓库使用"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">远程仓库使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#git-设置别名"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">git 设置别名</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git常用操作命令-备忘"><span class="post-toc-number">1.</span> <span class="post-toc-text">Git常用操作命令(备忘)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#首次使用设置"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">首次使用设置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基本操作"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">基本操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#远程仓库使用"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">远程仓库使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#git-设置别名"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">git 设置别名</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -221,7 +221,8 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="Git常用操作命令"><a href="#Git常用操作命令" class="headerlink" title="Git常用操作命令"></a>Git常用操作命令</h2><h4 id="首次使用设置"><a href="#首次使用设置" class="headerlink" title="首次使用设置"></a>首次使用设置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装git</span></span><br><span class="line">sudo apt install git -y</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 个人信息设置  </span></span><br><span class="line">git config --global user.name "用户名"</span><br><span class="line">git config --global user.email abc@example.com</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看配置信息</span></span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 手动编辑配置文件</span></span><br><span class="line">nano ~/.gitconfig</span><br></pre></td></tr></table></figure>
+            <h2 id="Git常用操作命令-备忘"><a href="#Git常用操作命令-备忘" class="headerlink" title="Git常用操作命令(备忘)"></a>Git常用操作命令(备忘)</h2><p>git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计,如今它成为程序员必不可少的一项工具,它能够帮助你更好的管理你的项目代码,接下来就看下git一些基本操作命令.</p>
+<h4 id="首次使用设置"><a href="#首次使用设置" class="headerlink" title="首次使用设置"></a>首次使用设置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装git</span></span><br><span class="line">sudo apt install git -y</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 个人信息设置  </span></span><br><span class="line">git config --global user.name "用户名"</span><br><span class="line">git config --global user.email abc@example.com</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看配置信息</span></span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 手动编辑配置文件</span></span><br><span class="line">nano ~/.gitconfig</span><br></pre></td></tr></table></figure>
 
 <h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><ol>
 <li><p>克隆一个仓库</p>
@@ -313,7 +314,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-08-17T20:27:38.000Z" itemprop="dateUpdated">2019-08-18 04:27:38</time>
+    最后更新时间：<time datetime="2019-09-30T02:28:01.880Z" itemprop="dateUpdated">2019-09-30 10:28:01</time>
 </span><br>
 
 

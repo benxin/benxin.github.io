@@ -30,19 +30,19 @@ ga('send', 'pageview');
     
     
     <meta name="keywords" content="MySQL">
-    <meta name="description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf   将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.0.3server-id">
+    <meta name="description" content="MySQL主从配置(适用于MySQL 8.0+)本文主要记录mysql 的主从配置,文末提供一分MySQL数据库管理思维导图.  配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf   将以下配置信息粘贴至mysqld.cnf">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL主从配置(适用于MySQL 8.0+)">
 <meta property="og:url" content="https://benxin.xyz/2019/08/05/MySQL Master-Slave/index.html">
 <meta property="og:site_name" content="Benxin&#39;s blog">
-<meta property="og:description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf   将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.0.3server-id">
+<meta property="og:description" content="MySQL主从配置(适用于MySQL 8.0+)本文主要记录mysql 的主从配置,文末提供一分MySQL数据库管理思维导图.  配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf   将以下配置信息粘贴至mysqld.cnf">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190805002916.png">
-<meta property="og:updated_time" content="2019-08-04T23:32:33.275Z">
+<meta property="og:updated_time" content="2019-09-30T02:31:01.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL主从配置(适用于MySQL 8.0+)">
-<meta name="twitter:description" content="MySQL主从配置(适用于MySQL 8.0+) 配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf   将以下配置信息粘贴至mysqld.cnf 文件 123bind-address	= 10.0.0.3server-id">
+<meta name="twitter:description" content="MySQL主从配置(适用于MySQL 8.0+)本文主要记录mysql 的主从配置,文末提供一分MySQL数据库管理思维导图.  配置主服务器12345主MySQL Server: 10.0.0.3从MySQL Server: 10.0.0.4# 编辑主服务器配置文件sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf   将以下配置信息粘贴至mysqld.cnf">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/benxin/image_depot/master/img/%2020190805002916.png">
     
         <link rel="alternate" type="application/atom+xml" title="Benxin&#39;s blog" href="/atom.xml">
@@ -198,7 +198,7 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MySQL主从配置-适用于MySQL-8-0"><span class="post-toc-number">1.</span> <span class="post-toc-text">MySQL主从配置(适用于MySQL 8.0+)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置主服务器"><span class="post-toc-number">1.0.0.0.1.</span> <span class="post-toc-text">配置主服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#创建一个新账户用于连接从服务器"><span class="post-toc-number">1.0.0.0.2.</span> <span class="post-toc-text">创建一个新账户用于连接从服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置从服务器"><span class="post-toc-number">1.0.0.0.3.</span> <span class="post-toc-text">配置从服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#检查是否配置成功"><span class="post-toc-number">1.0.0.0.4.</span> <span class="post-toc-text">检查是否配置成功</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MySQL数据库账户管理思维导图"><span class="post-toc-number">1.0.0.0.5.</span> <span class="post-toc-text">MySQL数据库账户管理思维导图</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#MySQL主从配置-适用于MySQL-8-0"><span class="post-toc-number">1.</span> <span class="post-toc-text">MySQL主从配置(适用于MySQL 8.0+)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置主服务器"><span class="post-toc-number">1.0.0.0.1.</span> <span class="post-toc-text">配置主服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#创建一个新账户用于连接从服务器"><span class="post-toc-number">1.0.0.0.2.</span> <span class="post-toc-text">创建一个新账户用于连接从服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#配置从服务器"><span class="post-toc-number">1.0.0.0.3.</span> <span class="post-toc-text">配置从服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#检查是否配置成功"><span class="post-toc-number">1.0.0.0.4.</span> <span class="post-toc-text">检查是否配置成功</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MySQL数据库管理思维导图"><span class="post-toc-number">1.0.0.0.5.</span> <span class="post-toc-text">MySQL数据库管理思维导图</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -220,7 +220,8 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="MySQL主从配置-适用于MySQL-8-0"><a href="#MySQL主从配置-适用于MySQL-8-0" class="headerlink" title="MySQL主从配置(适用于MySQL 8.0+)"></a>MySQL主从配置(适用于MySQL 8.0+)</h1><ol>
+            <h1 id="MySQL主从配置-适用于MySQL-8-0"><a href="#MySQL主从配置-适用于MySQL-8-0" class="headerlink" title="MySQL主从配置(适用于MySQL 8.0+)"></a>MySQL主从配置(适用于MySQL 8.0+)</h1><p>本文主要记录mysql 的主从配置,文末提供一分MySQL数据库管理思维导图.</p>
+<ol>
 <li><h5 id="配置主服务器"><a href="#配置主服务器" class="headerlink" title="配置主服务器"></a>配置主服务器</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">主MySQL Server: 10.0.0.3</span><br><span class="line">从MySQL Server: 10.0.0.4</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑主服务器配置文件</span></span><br><span class="line">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -282,7 +283,7 @@ ga('send', 'pageview');
 </li>
 </ol>
 <ul>
-<li><h5 id="MySQL数据库账户管理思维导图"><a href="#MySQL数据库账户管理思维导图" class="headerlink" title="MySQL数据库账户管理思维导图"></a>MySQL数据库账户管理思维导图</h5><blockquote>
+<li><h5 id="MySQL数据库管理思维导图"><a href="#MySQL数据库管理思维导图" class="headerlink" title="MySQL数据库管理思维导图"></a>MySQL数据库管理思维导图</h5><blockquote>
 <p>HTML版  <a href="https://github.com/benxin/image_depot/blob/master/MySQL.7z" target="_blank" rel="noopener">download</a></p>
 </blockquote>
 </li>
@@ -296,7 +297,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-08-04T23:32:33.275Z" itemprop="dateUpdated">2019-08-05 07:32:33</time>
+    最后更新时间：<time datetime="2019-09-30T02:31:01.155Z" itemprop="dateUpdated">2019-09-30 10:31:01</time>
 </span><br>
 
 
